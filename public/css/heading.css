@@ -1,0 +1,80 @@
+body{
+    background: rgb(164,176,195,.3);
+    background: linear-gradient(42deg, rgba(164,176,195,0.2) 0%, rgba(194,185,170,0.4) 50%, rgba(185,160,168,0.2) 100%); 
+    padding:0.2rem 0rem ;
+    min-height:70%;
+    font-family: Lato;
+}
+.heading{
+    text-align: left;
+    border-radius: 1%;
+    padding: 0.7rem 0;
+    background-color:rgb(89, 20, 49);
+
+    margin-bottom:1rem;
+    
+}
+.heading::after{
+    content:" ";
+    height: 1rem;
+    min-width:0.5rem;
+    border:none;
+    background:white;
+    display:block;
+    position:relative;
+    top:0.7rem;
+}
+.sub{
+    content:" ";
+    text-align: center;
+    display:block;
+    min-height:5.5rem;
+    min-width:60%;
+   float:right;
+   position:relative;
+   bottom:4.7rem;
+    background:white;
+    border-radius:9% 0% 12% 10% / 100% 13% 0% 0% ;
+
+
+}
+a{
+    text-decoration:none;
+}
+.sub a{
+    text-decoration: none;
+    font-family: sans-serif;
+    display:inline-flex;
+    color:black;
+    border-radius: 10%;
+    margin-top:1.3rem;
+    margin-left:1.7rem;
+    padding:0.9rem;
+    font-size:1.2rem;
+}
+.sub a:hover{
+    color:rgb(150, 62, 40);
+}
+.heading li{
+    list-style-type: none;
+    display:inline-block;
+}
+.heading li img{
+    border-radius: 50%;
+    width:4rem;
+    margin-right: 1rem;
+    position:relative;
+    top:0.8rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+ 
+}
+.heading span{
+    font-family:'Kalam', cursive;
+    display:inline-block;
+    font-weight:400;
+    font-size:2.5rem;
+    position:relative;
+    top:0.3rem;
+    color:white;
+}

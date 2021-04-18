@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merchant Bank </title>
+    <link rel="icon" href="./media/logo.png"/>
+    <link rel="stylesheet" href="./css/viewCust.css"/>
+    <link rel="stylesheet" href="./css/heading.css"/>
+    <link rel="stylesheet" href="./css/footer.css"/>
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Itim&family=Kalam:wght@300;400&family=Lato&family=Permanent+Marker&display=swap" rel="stylesheet"> 
+</head>
+<body>
+ <!--logo and name -->
+ <div class="heading">
+    <ul>
+        <li><img src="./media/logo.png" alt="logo"></li>
+        <li><span>Merchant Bank</span></li>
+    </ul>
+    <!--Navigation-->
+    <div class="sub">
+        <a href="/">Home</a>
+        <a href="/transfer">Transfer</a>
+        <a href="/transaction">Transaction</a>
+        <a href="#footer">Contact</a>
+    </div>
+ </div>
+ <!--Body-->
+ <div class="viewCust">
+     <form action="/getCust" method="POST">
+        <input class="textBox" type="text" placeholder="Enter name" name="nameCust" />
+        <input class="textBox" type="text" placeholder="Enter ID" name="custId"/>
+        <input class="button" type="submit" value="Search"/>
+     </form>
+ </div>
+ <div class="minn">
+    <% for(var i=0; i < data.length; i++) { %>
+        <div class="cust">
+            <label class="First">Name: </label> <label class="second"> <%=data[i].Name %></label><br/>
+            <label class="First">Account No: </label> <label class="second"> <%=data[i].Acct %></label><br/>
+            <label class="First">Balance: </label><label class="second"> <%=data[i].Balance %></label><br/>
+        </div>
+        <%}%>
+       
+        <% for(var i=0; i < data2.length; i++) { %>
+           <div class="cust">
+               <label class="First">Name:  </label> <label class="second"> <%=data2[i].Name %></label><br/>
+               <label class="First">Account No: </label> <label class="second"> <%=data2[i].Acct %></label><br/>
+               <label class="First">Balance: </label><label class="second"> <%=data2[i].Balance %></label><br/>
+           </div>
+           <%}%>
+ </div>
+
+<!--footer-->
+ <div id="footer" class="footer">
+    <h3>Contact</h3>
+    <img src="./media/fcb.png" alt="facebook"/> <a href="http:/facebook.com " target="_blank" >Facebook</a>
+    <img src="./media/insta.png" alt="instagram"/> <a href="http:/instagram.com " target="_blank" >Instagram</a>
+    <img src="./media/mail.png" alt="Mail"/> <a href="http:/gmail.com " target="_blank" > Mail</a>
+    <img src="./media/twitter.png" alt="twiter"/> <a href="http:/twitter.com " target="_blank" > Twitter</a>
+    <h5>&#169; Copyright 2021</h5>
+</div>
+
+</body>

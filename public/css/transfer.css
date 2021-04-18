@@ -1,0 +1,59 @@
+
+body{
+    text-align:center;
+}
+
+.task{
+    display:inline-block;
+    width:45%;
+    margin:0 auto;
+    border-radius: 5%;
+    box-shadow:3px 3px 3px 3px rgb(155,155,155);
+    background: white;
+    padding:1rem;
+    margin-bottom: 2rem;;
+
+}
+label{
+    margin:1rem;
+    font-size: 1.2rem;
+}
+input{
+    margin:1rem;
+    font-size: .9rem;
+}
+.task h3{
+    font-family: kalam;
+    font-size: 2rem;
+}
+.submit{
+    background: rgba(37, 36, 36, 0.945);
+    color:white;
+    width:9em;
+    height:2.5em;
+    margin: 2rem 0 3rem 0;
+    border:none;
+    
+}
+
+
+
+.hide{
+    display:none
+}
+.Success{
+    font-family: kalam;
+    display:block;
+    color:green;
+    font-size: 1.3rem;
+
+}
+.error{
+    font-family: kalam;
+    display:block;
+    color:red;
+    font-size: 1.3rem;
+}
+.transferMoney{
+    margin:0 auto;
+}

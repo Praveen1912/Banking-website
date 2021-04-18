@@ -1,0 +1,28 @@
+.displayTransaction{
+    background:white;
+    background: white;
+    text-align: center;
+    margin: 2rem auto;
+    width: 60%;
+    border-radius: 5%/10%;
+    padding: 3rem 2rem;
+    font-size: 1.2rem;
+    box-shadow:1px 1px 1px 1px rgb(155,155,155);
+    min-height:15rem;
+}
+table{
+    margin:0 auto;
+    font-size:1.2rem;
+}
+
+td{
+    margin-bottom: 0.2rem;
+}
+th{
+    background: rgb(89, 20, 49);
+    color: white;
+    padding: .8rem;
+    border-radius: 7%;
+    margin: 2rem;
+    font-size: 1.1rem;
+    }
