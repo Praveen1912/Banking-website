@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merchant Bank </title>
+    <link rel="icon" href="./media/logo.png"/>
+    <link rel="stylesheet" href="./css/transfer.css"/>
+    <link rel="stylesheet" href="./css/heading.css"/>
+    <link rel="stylesheet" href="./css/footer.css"/>
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Itim&family=Kalam:wght@300;400&family=Lato&family=Permanent+Marker&display=swap" rel="stylesheet"> 
+</head>
+<body>
+ <!--logo and name -->
+ <div class="heading">
+    <ul>
+        <li><img src="./media/logo.png" alt="logo"></li>
+        <li><span>Merchant Bank</span></li>
+    </ul>
+    <!--Navigation-->
+    <div class="sub">
+        <a href="/">Home</a>
+        <a href="/getCust">View Customer</a>
+        <a href="/transaction">Transactions</a>
+        <a href="#footer">Contact</a>
+    </div>
+ </div>
+ <!--Body-->
+ <div class="task ">
+    <h3>Transfer Money</h3>
+    <h2 class="<%=subhead%>"><%=submssg%></h2><br/>
+
+    <% for(var i=0; i < data.length; i++) { %>
+     <form action="/transfer" class="transferMoney" method="POST">
+        <input class="textBox" type="text" name="senderName" value="<%=data[i].Name%>" required readonly>
+        <input class="textBox" type="text" name="senderId" value="<%=data[i].Acct%>" required readonly>
+        <button class="aa" id ="bt<%=i%>" onclick="clicked(this)">Transfer</button>
+        <div id="d<%=i%>" class="disabled inline" >
+            <select name="recepientId">
+                <option value="" disabled selected>Select Receiver</option>
+                <% for(var j=0; j < data.length; j++) { %>
+                    <%   if(j!=i) { %>
+                    <option value="<%=data[j].Acct%>"><%=data[j].Name%></option>
+                    <%}%>
+                <%}%>
+
+            </select>
+            <input class="textBox"  type="number" name="transferAmt" placeholder="Enter Amount" required>
+            <input class="submit" type="submit" value="Submit">
+        </div>
+        
+     </form>
+     <%}%>
+ </div>
+<!--footer-->
+ <div id="footer" class="footer">
+    <h3>Contact</h3>
+    <img src="./media/fcb.png" alt="facebook"/> <a href="http:/facebook.com " target="_blank" >Facebook</a>
+    <img src="./media/insta.png" alt="instagram"/> <a href="http:/instagram.com " target="_blank" >Instagram</a>
+    <img src="./media/mail.png" alt="Mail"/> <a href="http:/gmail.com " target="_blank" > Mail</a>
+    <img src="./media/twitter.png" alt="twiter"/> <a href="http:/twitter.com " target="_blank" > Twitter</a>
+    <h5>&#169; Copyright 2021</h5>
+</div>
+<script src="./js/transfer.js"></script>
+</body>
